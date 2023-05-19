@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.nav{
+    position: fixed;
+    background-color: black;
+    height: 12vh;
+    padding-left: 2rem;
+    z-index: 10;
+    width: 100%;
+}
+
+ul{
+    display: flex;
+    padding: .6rem;
+    list-style: none;
+    justify-content: left;
+}
+
+ li a{
+   text-decoration: none; 
+   color: white;
+  }
+  
+  .navli{
+    padding: 1rem;
+}
+
+  .navli::after {
+    content: "";
+    display: block;
+    margin: auto;
+    height: 1.5px;
+    width: 0%;
+    transition: all 0.5s;
+  }
+  
+  .navli:hover::after, .navli ::after {
+    width: 100%;
+    background: white;
+  }
+  .navli a:hover{
+    cursor: pointer;
+    color: gray;
+  }
+
+
+  @media only screen and (max-width: 500px) and (min-width: 300px){
+    .nav{
+      position: fixed;
+      height: 7vh;
+      width: 105%;
+      z-index: 10;
+      padding-left: .1rem;
+  }
+  .navli{
+    padding: .1rem;
+    margin: .441rem;
+}
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 500px){
+  .nav{
+    position: fixed;
+    height: 9vh;
+    width: 100%;
+    z-index: 10;
+    padding-left: .1rem;
+}
+.navli{
+  padding: .1rem;
+  margin: .441rem;
+}
+}
